@@ -104,14 +104,12 @@ export function Home() {
             notes.map(note =>(
               <Note
                 key={String(note.id)}
-                title={note.title}
                 data ={note}
                 onClick={() => handleDetails(note.id)}
                 
               />
             ))
           }
-
         </Section>
       </Content>
 

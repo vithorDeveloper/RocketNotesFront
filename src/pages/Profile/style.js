@@ -13,6 +13,11 @@ export const Container = styled.div`
       align-items: center;
 
       padding: 0 12.4rem;
+
+      >button{
+      background: none;
+      border: none;
+    }
     }
 
     svg{

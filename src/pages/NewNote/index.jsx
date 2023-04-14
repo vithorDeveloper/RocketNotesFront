@@ -7,6 +7,7 @@ import { TextArea } from '../../components/textArea'
 import { NewItem } from '../../components/noteItem'
 import { Section } from '../../components/section'
 import { Button } from '../../components/button'
+import { ButtonText } from '../../components/buttonText'
 import { api } from '../../services/index'
 import { Link } from "react-router-dom"
 
@@ -67,6 +68,10 @@ export function NewNote(){
     navigate("/")
   }
 
+  function handleBack(){
+    navigate(-1)
+  }
+
   return(
     <Container>
       <Header/>
@@ -75,7 +80,11 @@ export function NewNote(){
           <Form>
               <header>
                   <h1>Criar nota</h1>
-                  <Link to="/">voltar</Link>
+                  <ButtonText 
+                  to="/"
+                  title="voltar"
+                  onClick={handleBack}
+                  ></ButtonText>
               </header>
 
               <Input 
